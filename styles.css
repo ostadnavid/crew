@@ -9,6 +9,7 @@ body
    flex-direction: column;
    align-items: center;
    min-height: 100vh;
+   overflow-x: hidden;
 }
 *
 {
@@ -180,10 +181,10 @@ nav .togglemenu.active ~ .contant
    background-color: rgb(0, 0, 0);
    position: absolute;
    bottom:0;
-   right: 4%;
+   right: 50px;
    visibility: hidden;
    opacity: 0;
-   transform: translateY(-10px);
+   transform: translateY(-15px);
    max-width:50px;
    max-height: 25px;
    font-size: 0.75em;
@@ -353,8 +354,7 @@ footer
    margin-top: 200px;
 
 }
-footer .social-icon,
-footer .menu
+footer .social-icon
 {
    position: relative;
    display:flex;
@@ -363,19 +363,18 @@ footer .menu
    margin:10px 0;
 
 }
-footer .social-icon li,
-footer .menu li
+footer .social-icon li
 {
    list-style-type: none;
    display: flex;
    justify-content: center;
    align-items: center;
    height: auto;
-   margin-bottom: 10px;
+   width:auto;
+
    transition: 0.5s ease;
 }
-footer .social-icon li a,
-footer .menu li a
+footer .social-icon li a
 {
    font-size: 4em;
    color:white;
@@ -386,22 +385,13 @@ footer .menu li a
 }
 footer .social-icon li:hover
 {
-   transform: translateY(10px);
+   transform: translateY(-10px);
 }
-footer .menu li a
-{
-   font-size: 1.5em;
-   color:white;
-   margin:0 10px;
-   display: inline-block;
-   text-decoration: none;
-   transition: 0.5s;
-   opacity: 0.75;
-}
-footer .menu li a:hover
-{
-   opacity: 1;
-}
+@media screen and(max-width:1100px){
+   footer .social-icon li a {
+      font-size: 2em;
+   }
+} 
 footer .wave
 {
    position: absolute;
